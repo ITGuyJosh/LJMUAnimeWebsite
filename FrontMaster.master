@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="FrontMaster.master.cs" Inherits="FrontMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>LJMU Anime Society</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <link href="Resources/CSS/StyleSheet.css" rel="stylesheet"/>        
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="~/Resources/Images/favicon.ico"/>  
+    <asp:ContentPlaceHolder id="head" runat="server">              
+    </asp:ContentPlaceHolder>
+</head>
+<body>                   
+    <form id="form1" runat="server">
+        <header>
+                <h1>
+                    <a href="Default.aspx">LJMU Anime Society</a>
+                    </h1>
+                <nav class="FrontHeaderNav">
+                    
+                    <ul>
+                        <li><a href="About.aspx">About</a></li>
+                        <li><a href="AnimeReviews.aspx">Anime Reviews</a></li>
+                        <li><a href="Contact.aspx">Contact</a> |</li>
+                        <li><asp:LoginStatus ID="LoginStatus" runat="server" /></li>             
+                        <li><a href="users/UserDash.aspx">Dash</a></li>
+                    </ul>
+                </nav>
+        </header>
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+              
+        </asp:ContentPlaceHolder>
+
+    <footer>
+                <nav class="FrontFooterNav">
+                    
+                        <ul>
+                        <li><a href="#">&copy; Joshua Evans 15-16</a></li>                                     
+                            <li><a href="Terms.aspx">Terms & Conditions</a></li> 
+                            <li><a href="Privacy.aspx">Privacy Policy</a></li>                        
+                    </ul>                   
+                </nav>
+        </footer>
+    </form>    
+</body>
+</html>

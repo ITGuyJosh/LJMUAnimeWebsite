@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMaster.master.cs" Inherits="Admin_AdminMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>LJMU Anime Society</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <link href="~/Resources/CSS/StyleSheet.css" rel="stylesheet"/>        
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="~/Resources/Images/favicon.ico"/>  
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+          
+    <header class="BackHeader">
+        <h1>
+            <a href="../Default.aspx">LJMU Anime Society</a>
+            </h1>
+        <nav class="BackHeaderNav">
+                    
+            <ul>
+                <li>Hello! <asp:LoginName ID="LoginName" runat="server" /></li>&nbsp;&nbsp;&nbsp;| 
+                <li><asp:LoginStatus ID="LoginStatus" runat="server" /></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="DashContainer">
+        <a href="ARManager.aspx" runat="server">
+        <div class="DashBox">
+            <p>Anime Review Manager</p>
+        </div>
+        </a>
+        <a href="RolesManager.aspx" runat="server">
+        <div class="DashBox">
+            <p>User & Role Manager</p>
+        </div>
+        </a>
+        <a href="AccSettings.aspx">
+        <div class="DashBox">
+            <p>Acc Settings</p>
+        </div>
+        </a>
+    </div>  
+  
+    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+    </asp:ContentPlaceHolder>
+    
+    </form>
+</body>
+</html>
