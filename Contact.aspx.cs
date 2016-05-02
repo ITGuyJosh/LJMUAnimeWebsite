@@ -13,7 +13,7 @@ public partial class Contact : System.Web.UI.Page
 
     }
 
-    protected void Button1_Click(object sender, EventArgs e)
+    protected void BtnSubmit_Click(object sender, EventArgs e)
     {
 
         try
@@ -55,23 +55,24 @@ public partial class Contact : System.Web.UI.Page
                 smtpClient.Dispose();
 
                 //set UI thank you message
-                Label1.ForeColor = System.Drawing.Color.Blue;
-                Label1.Text = "Thank you for contacting us!";
+                lblText.ForeColor = System.Drawing.Color.Blue;
+                lblText.Text = "Thank you for contacting us!";
+                lblText.CssClass = "lblCorrect";
 
                 //reseting fields and buttons
                 txtName.Enabled = false;
                 txtEmail.Enabled = false;
                 txtSubject.Enabled = false;
                 txtComments.Enabled = false;
-                Button1.Enabled = false;
+                btnSubmit.Enabled = false;
             }
 
         }
         catch (Exception ex)
         {
             //set UI error message
-            Label1.ForeColor = System.Drawing.Color.Red;
-            Label1.Text = "There is an unknown problem. Please try again later. </br>" + ex.Message;
+            lblText.ForeColor = System.Drawing.Color.Red;
+            lblText.Text = "There is an unknown problem. Please try again later. </br>" + ex.Message;
         }
 
     }

@@ -52,5 +52,8 @@ public partial class AddReview : System.Web.UI.Page {
 
         //close sql connections
         con.Close();
+
+        //Redirect
+        Response.Redirect("UserDash.aspx");
     }
 }

@@ -6,7 +6,7 @@
     <section class="MainBody">
             <div id="AboutWrapper">            
                 <div id="AboutWelcome">
-                    <img alt="Club Banner" src="Resources/Images/Optimized-HFBanner.jpg" id="Banner"/>
+                    <img alt="Club Banner" src="Resources/Images/AllRiseBanner.png" id="Banner"/>
                     <h2>Welcome to LJMU Anime Society!</h2>
                     <h3>Would you like to know about what we get up to? Well..</h3>
                 </div>

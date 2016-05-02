@@ -7,7 +7,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     
-    <div class="BackMain">
+    <div class="BackMain">        
+
         <div class="LeftAddForm">
             <asp:TextBox ID="AniTitle" runat="server" placeholder="Title" CssClass="AniTitle"></asp:TextBox>
             <asp:TextBox ID="AniDesc" TextMode="MultiLine" runat="server" placeholder="Description" CssClass="AniDesc"></asp:TextBox>
@@ -24,5 +25,21 @@
             <asp:Button ID="AddSubmit" runat="server" Text="Submit" onClick="btnSubmit_Click" CssClass="AddSubmit"/>
         </div>
     </div>
+
+    <script type="text/javascript">
+    $(function () {
+        $("#AddSubmit").dialog({
+            modal: true,
+            autoOpen: false,
+            title: "Review Added!",
+            width: 300,
+            height: 150
+        });
+        $("#btnShow").click(function () {
+            $('#dialog').dialog('open');
+        });
+    });
+</script>
+
 </asp:Content>
 

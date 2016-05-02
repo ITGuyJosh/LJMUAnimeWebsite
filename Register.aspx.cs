@@ -40,6 +40,21 @@ using System.Data;
             con.Close();
             
         }
+        protected void LJMUValidator(object source, ServerValidateEventArgs args)
+        {
+            string rawemail = args.Value;
+            string ljmu = "ljmu.ac.uk";
+            string trimemail = rawemail.Substring(Math.Max(0, rawemail.Length - 10));
+
+            if (trimemail == ljmu)
+            {
+                args.IsValid = true;
+            }
+            else {
+                args.IsValid = false;
+            }
+
+        }
 }
 
 

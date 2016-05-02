@@ -129,10 +129,21 @@ footer{
 }
 .MainBody a {
     text-decoration: none;
-    color: #E50914;
+    color: #2A5DB0;
 }
 .MainBody a:hover {
     text-decoration: underline;
+}
+.ErrorMsg {
+    color: #cc0000;
+    text-align:center;
+    font-style: italic;
+    display:inline-table;
+    width: 100%;    
+}
+.ErrorMsg ul {
+    list-style-type:none;
+    padding: 0;
 }
 
 /*Landing Page*/
@@ -162,7 +173,7 @@ footer{
     
 }
 #Banner{
-    height: 225px;
+    height: 250px;
     width: 100%;
     
 }
@@ -174,9 +185,11 @@ footer{
     /*Review Filter Navigation*/
 .ReviewFilter {
     padding-top:15px; 
-    padding-bottom:25px; 
+    padding-bottom:15px; 
+    margin-bottom: 3%;
     float: right;
     display:inline-block;
+    border-bottom: 1px solid;
 }
 .ReviewFilter ul {
     margin: 0; 
@@ -188,9 +201,7 @@ footer{
 }
 .ReviewFilter li {
     margin-right: 0px; 
-    display: inline;
-    color: #E50914;
-
+    display: inline;    
 }
 .ReviewFilter ul li a {
     margin: 0px; 
@@ -198,7 +209,9 @@ footer{
 }
 .ReviewFilter span {
     display: inline-block;
-    float: right;
+    float: left;
+    margin-right: 5px;
+    margin-left: 15px;
 }
     /*Anime Reivews*/
 .Reviews {
@@ -251,38 +264,52 @@ footer{
     width:49%;
     padding-right: 1%;
 }
-.ContactForm p {
-    padding-bottom: 5px;
+.ContactForm span {
+    float:left;
+    width:3%;  
+    margin-top: 10px;  
 }
-.ContactFormTxtName {
-    width: 100%;
+.ContactForm input[type="text"] {
+    width: 95%;    
+    font-size: 20px;
+    resize: none;
+    font-family: 'Open Sans', sans-serif;
+    padding: 1px;
+    height: 30px;    
+    float:left;    
+    margin-bottom:2%;    
 }
-.ContactFormTxtEmail {
-    width: 100%;
-}
-.ContactFormTxtSubject {
-    width: 100%;
-}
-.ContactFormTxtCommentsTitle {
-    vertical-align: top;
-}
-.ContactFormTxtComments {
-    width: 99.5%;
+.ContactForm textarea {
+    width: 95%;
     vertical-align: top;
     height: 150px;
+    resize: none;
+    font-size: 20px;
+    resize: none;
+    font-family: 'Open Sans', sans-serif;       
+    float:left;    
+    margin-bottom:2%;
 }
-.ContactFormSubmit {
-    background-color: #ccc;
-    color: #000;
-    font-size: 16px;
-    text-decoration: none;
-    cursor: pointer;
-    border:none;
-    padding: 7px;
+
+.ContactFormSubmit {    
+    height:30px;
+    margin:1%;
+    background-color: #3f3f3f;    
+    text-align:center;
+    cursor:pointer;
+    color:#fff;   
+    font-family: 'Open Sans', sans-serif;  
+    min-width:80px; 
+    width: 94%;
 }
 .ContactFormSubmit:hover {
-    text-decoration: underline;
+    background-color:#181717;
 }
+.lblCorrect {
+    width: 94% !important;
+    margin-bottom: 2% !important;
+}
+
 .ContactInfo{
     float:left;
     width:49%;        
@@ -309,6 +336,32 @@ footer{
     margin-right: auto;
     width: 70%;
     text-align: center;
+}
+.LoginBox h2 {
+    margin-bottom: 5%;  
+}
+.LoginBox input[type="text"]{
+    float: left;
+    width: 95%;
+}
+.LoginBox input[type="password"]{
+    float: left;
+    width: 95%;
+}
+.LoginBox span {
+    float: left;
+    width: 3%;
+}
+.LogName { 
+    margin-top:4%;   
+    width: 100%;
+    float: left;
+    margin-bottom: 2%;
+}
+.LogPass {    
+    width: 100%;
+    float: left;
+    margin-bottom: 2%;
 }
 
 /*ANIME REVIEWS PAGE*/
@@ -343,6 +396,68 @@ footer{
     float:left;
     position:relative;
 }
+
+/*REGISTER*/
+.RegContainer {
+    width:70%;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
+.RegContainer table {
+    width: 100%;
+}
+.RegContainer table input[type="submit"] {
+    text-align: center;
+}
+.RegContainer table tbody:last-child tr {
+    text-align: center;
+}
+.RegContainer table tbody:last-child td {
+    text-align: center;
+}
+
+.RegContainer input[type="text"] {
+    font-size: 20px;
+    resize: none;
+    font-family: 'Open Sans', sans-serif;
+    padding: 1px;
+    height: 30px;
+    width: 94%;
+    float:left;    
+    margin-bottom:2%;
+}
+.RegContainer input[type="password"] {
+    font-size: 20px;
+    resize: none;
+    font-family: 'Open Sans', sans-serif;
+    padding: 1px;
+    height: 30px;
+    width: 94%;
+    float:left;    
+    margin-bottom:2%;
+}
+.RegContainer span {
+    float:left;
+    width: 3%;
+}
+.RegContainer input[type="submit"]  {    
+    height:30px;
+    margin:1%;
+    background-color: #3f3f3f;    
+    text-align:center;
+    cursor:pointer;
+    color:#fff;   
+    font-family: 'Open Sans', sans-serif;  
+    min-width:80px; 
+}
+.RegContainer input[type="submit"]:hover {
+    background-color:#181717;
+}
+.CompleteReg {
+    text-align:center;
+}
+
 
 /*BACKMASTER HEADER*/
 .BackHeader{
@@ -599,14 +714,19 @@ footer{
 .BottomEditSelector {
     margin-top: 3%;
     margin-bottom:3%;
+    text-align:center;
 }
 
 .BottomEditSelector table {
     width:100%;
 }
 
-.BottomEditSelector table th {
+.BottomEditSelector table th:nth-child(2) {
     text-align:left;    
+}
+
+.BottomEditSelector table th {
+    text-align:center;    
 }
 
 /*ACC SETTINGS / CHANGE PASSWORD*/

@@ -9,20 +9,17 @@
                 <LayoutTemplate>
                      <div class="LoginBox">
                     
-                    <h2>Log In</h2>
+                    <h2>Login</h2>
+                         <asp:ValidationSummary ID="ValidationSummary" runat="server" ValidationGroup="LoginSys" ShowMessageBox="true" CssClass="ErrorMsg" />
 
-                         <div class="LogName">
-                             <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName" CssClass="AccLbl">User Name</asp:Label>
-
-                    <asp:TextBox ID="UserName" runat="server" CssClass="AccTextBox"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" ControlToValidate="UserName" ErrorMessage="User Name is required." ToolTip="User Name is required." ValidationGroup="LoginSys">*</asp:RequiredFieldValidator>
+                         <div class="LogName">                             
+                    <asp:TextBox ID="UserName" runat="server" CssClass="AccTextBox" placeholder="USERNAME"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" ControlToValidate="UserName" ErrorMessage="Error: User Name is required." ToolTip="User Name is required." ValidationGroup="LoginSys">*</asp:RequiredFieldValidator>
                          </div>
 
                          <div class="LogPass">
-                             <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="Password" CssClass="AccLbl">Password</asp:Label>
-
-                    <asp:TextBox ID="Password" runat="server" TextMode="Password" CssClass="AccTextBox"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="Password" ErrorMessage="Password is required." ToolTip="Password is required." ValidationGroup="LoginSys">*</asp:RequiredFieldValidator>
+                    <asp:TextBox ID="Password" runat="server" TextMode="Password" CssClass="AccTextBox" placeholder="PASSWORD"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="Password" ErrorMessage="Error: Password is required." ToolTip="Password is required." ValidationGroup="LoginSys">*</asp:RequiredFieldValidator>
                          </div>
                          <div class="LogRemember">
                              <asp:CheckBox ID="RememberMe" runat="server" Text="Remember me next time." />

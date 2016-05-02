@@ -96,5 +96,4 @@ public partial class UserDash : System.Web.UI.Page
         //redirect back to user dash
         Response.Redirect("UserDash.aspx");
     }
-
 }

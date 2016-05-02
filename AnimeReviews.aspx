@@ -8,16 +8,13 @@
     <section class="MainBody">
             <nav class="ReviewFilter">
                 <ul>
-                    <li><a href="#">Date ASC</a></li>
-                    <li><a href="#">Date DSC</a></li>
+                    <li><strong>Filter: </strong></li>
+                    <li><asp:LinkButton ID="lnkBtnDSC" runat="server" OnClick="lnkBtnDSC_Click">Date DSC</asp:LinkButton></li>
+                    <li><asp:LinkButton ID="lnkBtnUser" runat="server" OnClick="lnkBtnUser_Click">By User</asp:LinkButton></li>
                 </ul>
-                <select class="AnimeSelector" >
-                    <option value="0">Select an Anime...</option>
-                    <option value="0">One Punch Man</option>
-                    <option value="1">Full-Metal Alchemist</option>
-                    <option value="2">Death Note</option>
-                    <option value="3">One Piece</option>
-                </select>
+                <asp:Label ID="lblCat" runat="server" Text="Category "></asp:Label>
+                <asp:DropDownList ID="CatSelector" AutoPostBack="true" runat="server" DataSourceID="CatSelectorDS" DataTextField="category" DataValueField="id" OnSelectedIndexChanged="CatSelector_SelectedIndexChanged"></asp:DropDownList>
+                <asp:SqlDataSource ID="CatSelectorDS" runat="server" ConnectionString="<%$ ConnectionStrings:LJMUDBCON %>" SelectCommand="SELECT [id], [category] FROM [categories]"></asp:SqlDataSource>
             </nav>
         
         <asp:ListView ID="AnimeReviews" runat="server" DataSourceID="LJMUDB">
@@ -38,7 +35,7 @@
                 <div class="PagerContainer">
                 <div class="AnimePager">
                     
-                    <asp:DataPager ID="AnimePager" runat="server">
+                    <asp:DataPager ID="AnimePager" runat="server" PagedControlID="AnimeReviews">
                         <Fields>
                             <asp:NextPreviousPagerField ButtonType="Button" ShowFirstPageButton="True" ShowNextPageButton="False" ShowPreviousPageButton="False" />
                             <asp:NumericPagerField />
@@ -52,10 +49,10 @@
                   
         </section>
 
-<asp:SqlDataSource ID="LJMUDB" runat="server" ConnectionString="<%$ ConnectionStrings:LJMUDBCON %>" SelectCommand=" SELECT [anime_reviews].[id], UserName, category, [img_link], [title], [description], [review] FROM [anime_reviews] 
+<asp:SqlDataSource ID="LJMUDB" runat="server" ConnectionString="<%$ ConnectionStrings:LJMUDBCON %>" SelectCommand=" SELECT [anime_reviews].[id], UserName, category, [img_link], [title], [description], [review], [anime_reviews].[created] FROM [anime_reviews] 
   left join [aspnet_Users] on anime_reviews.user_id = aspnet_Users.id 
   left join categories on anime_reviews.category_id = categories.id 
-  Order BY [user_id]"></asp:SqlDataSource>
+  Order BY [anime_reviews].[created] DESC"></asp:SqlDataSource>
 
 
     <script>

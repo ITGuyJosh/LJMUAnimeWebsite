@@ -87,8 +87,9 @@
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:CommandField ShowSelectButton="True" />
-                    <asp:BoundField DataField="title" HeaderText="Title" SortExpression="title" />
+                    <asp:BoundField DataField="title" HeaderText="Title" SortExpression="title" ItemStyle-HorizontalAlign="Left"/>
                     <asp:BoundField DataField="category" HeaderText="Category" SortExpression="category" />
+                    <asp:BoundField DataField="created" HeaderText="Created" SortExpression="created" />
                 </Columns>
                 <EditRowStyle BackColor="#2461BF" />
                 <FooterStyle BackColor="#181717" Font-Bold="True" ForeColor="White" />
@@ -101,7 +102,7 @@
                 <SortedDescendingCellStyle BackColor="#E9EBEF" />
                 <SortedDescendingHeaderStyle BackColor="#4870BE" />
             </asp:GridView>
-            <asp:SqlDataSource ID="UserReviewDS" runat="server" ConnectionString="<%$ ConnectionStrings:LJMUDBCON %>" SelectCommand="SELECT [anime_reviews].[id], [title], [category] FROM [anime_reviews] LEFT JOIN [categories] ON [anime_reviews].[category_id] = [categories].id WHERE ([user_id] = @user_id)">
+            <asp:SqlDataSource ID="UserReviewDS" runat="server" ConnectionString="<%$ ConnectionStrings:LJMUDBCON %>" SelectCommand="SELECT [anime_reviews].[id], [title], [category], [anime_reviews].[created] FROM [anime_reviews] LEFT JOIN [categories] ON [anime_reviews].[category_id] = [categories].id WHERE ([user_id] = @user_id) ORDER BY [anime_reviews].[created] DESC">
                 <SelectParameters>
                     <asp:SessionParameter Name="user_id" SessionField="uid" Type="Int32" />
                 </SelectParameters>
