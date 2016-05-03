@@ -40,8 +40,7 @@
                                 <asp:CompareValidator ID="PasswordCompare" runat="server" ControlToCompare="Password" ControlToValidate="ConfirmPassword" Display="None" ErrorMessage="Error: The Password and Confirmation Password must match." ValidationGroup="CreateUser" CssClass="ErrorMsg"></asp:CompareValidator>
         
                                 <asp:Literal ID="ErrorMessage" runat="server" EnableViewState="False"></asp:Literal>
-                      
-        
+                                                         
                     </ContentTemplate>
                 </asp:CreateUserWizardStep>
 
@@ -50,15 +49,16 @@
                             <h3>Your account has been successfully created.</h3>
                             <span>
                                 <asp:Button ID="ContinueButton" runat="server" CausesValidation="False" CommandName="Continue" Text="Login Now" ValidationGroup="CreateUser" PostBackUrl="~/Users/UserDash.aspx" />
-                            </span>
+                            </span>                      
                     </ContentTemplate>
                 </asp:CompleteWizardStep>
 
             </WizardSteps>
         </asp:CreateUserWizard>
-
+            
         </div>
 
+        <div class="MobSpace2"></div>        
 
     </section>
 </asp:Content>

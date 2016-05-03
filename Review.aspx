@@ -6,31 +6,33 @@
     <asp:FormView ID="DisplayReview" runat="server" DataKeyNames="id" DataSourceID="ViewReview" RenderOuterTable="false">
       <ItemTemplate>
           <div id="DisplayReviewMain">
-            <aside id="DisplayReviewAside">
+            <div id="DisplayReviewAside">
                 <img alt="Anime Image" src='users\<%#  Eval("img_link")%>' class="DisplayImg"/>
-                <div>
+                <div class="UserReviewInfo">
                     <ul>
                         <li>User: <asp:Label ID="user_idLabel" runat="server" Text='<%# Bind("UserName") %>' /></li>
                         <li>Category: <asp:Label ID="category_idLabel" runat="server" Text='<%# Bind("category") %>' /></li>
                         <li>Created:<asp:Label ID="createdLabel" runat="server" Text='<%# Bind("created") %>' /></li>
                     </ul>          
                 </div>
-            </aside>
+            </div>
 
-            <section id="DisplayReviewSection">
-                <div>           
+            
+                <div class="UserReviewTop">
+                <div class="UserReviewTitle">           
                     <h1><asp:Label ID="titleLabel" runat="server" Text='<%# Bind("title") %>' /></h1>
                 </div>
-                <div>
+                <div class="UserReviewDesc">
                     <h2>Description</h2>
                     <p><asp:Label ID="descriptionLabel" runat="server" Text='<%# Bind("description") %>' /></p>
                 </div>
-
-                <div>
+            </div>      
+              <div id="DisplayReviewSection">          
+                <div class="UserReviewRev">
                     <h2>Review</h2>
                     <p><asp:Label ID="reviewLabel" runat="server" Text='<%# Bind("review") %>' /></p>
                 </div>           
-            </section>
+            </div>
             </div>
       </ItemTemplate>
     </asp:FormView>
@@ -40,10 +42,6 @@
         </SelectParameters>
         
     </asp:SqlDataSource>
-
-     <asp:Repeater runat="server" DataSourceID="ViewReview"></asp:Repeater>
-
-
 
 </asp:Content>
 

@@ -20,7 +20,7 @@
 
                     <div class="AccNewPass">
                         <asp:TextBox ID="NewPassword" runat="server" TextMode="Password" CssClass="AccTextBox" placeholder="NEW PASSWORD"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="NewPasswordRequired" runat="server" ControlToValidate="NewPassword" ErrorMessage="Error: New Password is required." ToolTip="New Password" />
+                        <asp:RequiredFieldValidator ID="NewPasswordRequired" runat="server" ControlToValidate="NewPassword" ErrorMessage="Error: New Password is required." ToolTip="New Password" ValidationGroup="ChangePassword">*</asp:RequiredFieldValidator>
                     </div>
                     <div class="AccConfPass">
 
@@ -44,11 +44,13 @@
                 <div class ="AccSuccess">
                     <h3>Your password has been changed!</h3>
                     <asp:Button ID="ContinuePushButton" runat="server" CausesValidation="False" CommandName="Continue" Text="Continue" CssClass="AccBtns" PostBackUrl="~/Admin/ARManager.aspx" />
+                    
                 </div>
             </SuccessTemplate>
 
         </asp:ChangePassword>
 
     </div>
+    <div class="MobSpace"></div>
 </asp:Content>
 

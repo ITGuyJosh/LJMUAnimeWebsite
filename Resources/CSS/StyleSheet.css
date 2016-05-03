@@ -25,7 +25,8 @@ header{
     z-index:1000;
 }
 header h1 {
-    width: 35%;
+    width: 33%;
+    padding-left:2%;
     padding-top:10px; 
     text-align:left; 
     margin: 0px auto; 
@@ -40,7 +41,7 @@ header h1 a{
     text-decoration: none;
 }
 .FrontHeaderNav {
-    width: 65%;
+    width: 64%;
     padding-top:15px; 
     text-align:right; 
     margin: 0px auto; 
@@ -48,6 +49,7 @@ header h1 a{
     font-weight:500; 
     float:left;
     display:inline-block;
+    padding-right: 1%;
 }
 .FrontHeaderNav ul {
     margin: 0; 
@@ -176,6 +178,10 @@ footer{
     height: 250px;
     width: 100%;
     
+}
+#AboutWrapper {
+    text-align: justify;
+    text-justify: inter-word;
 }
 #AboutWrapper h3 {
     padding-top: 5px;
@@ -366,35 +372,32 @@ footer{
 
 /*ANIME REVIEWS PAGE*/
 #DisplayReviewMain {
-    width:90%;
-    height:100%;
+    width:90%;    
     margin-top:7.5%;
-    margin-left: 5%;
-    position:absolute;
+    margin-left:auto;
+    margin-right:auto;    
+    text-align: justify;
+    text-justify: inter-word;
 }
 #DisplayReviewAside {
     width:20%;
-    float:left;
-    position:relative;
+    float:right;    
     min-width:250px;
 }
 
 #DisplayReviewAside img{
    width: 225px;
-   height: 330px;
-   height:40%;
+   height: 330px;   
 } 
 
 #DisplayReviewAside ul {
     list-style:none;
-    margin-left:-40px;
+    padding-left: 10px;    
 }
 
 #DisplayReviewSection {
-    width:70%;
-    height:100%;
-    float:left;
-    position:relative;
+    width: 70%;
+    display:inline-block;
 }
 
 /*REGISTER*/
@@ -910,25 +913,6 @@ footer{
 
 /*Media Queries for Different Screen Sizes*/
 
-/* Large Devices, Wide Screens */
-/*Primarilly used to stretch cover image*/
-@media only screen and (max-width : 1400px) {
-
-}
-
-/* Default Desktop View in General Styling  */
-
-/* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {
-
-}
-
-/* Extra Small Devices, Phones */ 
-@media only screen and (max-width : 480px) {
-
-}
-
-
 @media (max-width: 925px) {
     #DisplayReviewSection {
         width:60%;    
@@ -947,7 +931,7 @@ footer{
         position:relative; //makes the header not take up the screen space on mobile devices
     }
     header h1 {
-        width: 100%;        
+        width: 98%;        
         text-align:center; 
         margin: 0px auto; 
         font-size: 25px; 
@@ -957,7 +941,7 @@ footer{
         display:inline-block;
     }
     .FrontHeaderNav {
-        width: 100%;
+        width: 98%;
         padding-top: 5px;
         text-align: center;
         margin: 0px auto; 
@@ -965,12 +949,15 @@ footer{
         font-weight:500; 
         float:left;
         display:inline-block;
+        line-height:18.5px;
     }    
     footer{
-        position:relative; //makes the footer not take up the screen space on mobile devices
+        /*makes the footer not take up the screen space on mobile devices*/
+        position:relative; 
     }
     .LandingFooter {
-        position:fixed; //keeps the splash screen as a centred whole for aesthetics 
+        /*keeps the splash screen as a centred whole for aesthetics*/ 
+        position:fixed; 
     }      
     .FrontFooterNav {
         width: 100%;
@@ -980,7 +967,7 @@ footer{
         font-size: 12px; 
         font-weight:500; 
         float:left;
-        display:inline-block;
+        display:inline-block;        
     }
     .MainBody{
         width: 90%;
@@ -1002,11 +989,56 @@ footer{
     .FooterSpace {
         margin-bottom:25%; //forcing footer to bottom because of masterpages
     }
+    .ContactFormSubmit {
+        margin-bottom: 3%;
+    }
+    .MobSpace {
+        margin-bottom: 75%;
+    }
+    .MobSpace2 {
+        margin-bottom: 60%;
+    }
+    .MobSpace3 {
+        margin-bottom: 100%;
+    }
+    #DisplayReviewAside {
+        width: 20%;
+    }
+    #DisplayReviewSection {
+        width: 100%;
+    }
+    .UserReviewTop {
+        width: 60%;
+        float: left;
+    }
+
+}
+
+@media (max-width: 705px) {
+    
+    #DisplayReviewAside {
+        width: 100%;               
+    }
+    #DisplayReviewAside img {        
+        float:left;        
+        min-width: 225px;
+    }
+    .UserReviewInfo {        
+        width: 225px;
+        float:left;
+    }
+
+    .UserReviewTop {
+        width: 100%;
+        float: left;
+    }
+
 }
 
 @media (max-width: 600px) {
     .FooterSpace {
-        margin-bottom:32%; //forcing footer to bottom because of masterpages
+        /*forcing footer to bottom because of masterpages*/
+        margin-bottom:32%; 
     }
 }
 
@@ -1027,6 +1059,36 @@ footer{
         margin-bottom:40%; //forcing footer to bottom because of masterpages
     }
 }
+
+@media(max-width: 500px) {
+    #DisplayReviewAside img {        
+        width: 70%;
+        display:block;
+        margin: 0 auto;
+        float:none;
+    }
+    .UserReviewInfo {        
+        width: 100%;        
+    }
+}
+@media (max-width: 450px) {
+    header {
+        height: 85px;
+    }
+    .ContactForm input[type="text"] {
+        width: 94%;
+    }
+    .ContactForm textarea {
+        width: 94%;
+    }
+    .RegContainer {
+        width: 100%;
+    }
+    .LoginBox {
+        width: 100%;
+    }
+}
+
 @media (max-width: 420px) {
     .FrontFooterNav ul li a {
         padding: 0px 10px 0px 0px;
@@ -1055,7 +1117,7 @@ footer{
 }
 @media (max-width: 370px) {
     .FrontHeaderNav {
-        font-size: 3.5vw; /* resize inline with the viewport */
+        font-size: 4vw; /* resize inline with the viewport */
     }
     .FrontFooterNav {
         font-size: 3.2vw;

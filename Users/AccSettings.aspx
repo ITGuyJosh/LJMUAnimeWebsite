@@ -3,45 +3,55 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <asp:ChangePassword ID="ChangePassword" runat="server" RenderOuterTable="false">
-        <ChangePasswordTemplate>
+   <div class="MainBody">
+        <asp:ChangePassword ID="ChangePassword" runat="server" RenderOuterTable="false">
+            <ChangePasswordTemplate>
 
-            <div class="MainBody">
+
                 <div class="ChangePassBox">
-                <h2>Change Password</h2>
-                <div class="AccCurPass">
-                    <asp:Label ID="CurrentPasswordLabel" runat="server" AssociatedControlID="CurrentPassword" CssClass="AccLbl">Password</asp:Label>
+                    <h2>Change Password</h2>
 
-                    <asp:TextBox ID="CurrentPassword" runat="server" TextMode="Password" CssClass="AccTextBox"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="CurrentPasswordRequired" runat="server" ControlToValidate="CurrentPassword" ErrorMessage="Password is required." ToolTip="Password is required." ValidationGroup="ChangePassword">*</asp:RequiredFieldValidator>
+                    <asp:ValidationSummary ID="ValidationSummary" runat="server" ValidationGroup="ChangePassword" ShowMessageBox="true" CssClass="ErrorMsg" />
+
+                    <div class="AccCurPass">
+                        <asp:TextBox ID="CurrentPassword" runat="server" TextMode="Password" CssClass="AccTextBox" placeholder="CURRENT PASSWORD"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="CurrentPasswordRequired" runat="server" ControlToValidate="CurrentPassword" ErrorMessage="Error: Password is required." ToolTip="Password is required." ValidationGroup="ChangePassword">*</asp:RequiredFieldValidator>
+                    </div>
+
+                    <div class="AccNewPass">
+                        <asp:TextBox ID="NewPassword" runat="server" TextMode="Password" CssClass="AccTextBox" placeholder="NEW PASSWORD"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="NewPasswordRequired" runat="server" ControlToValidate="NewPassword" ErrorMessage="Error: New Password is required." ToolTip="New Password" ValidationGroup="ChangePassword">*</asp:RequiredFieldValidator>
+                    </div>
+                    <div class="AccConfPass">
+
+                        <asp:TextBox ID="ConfirmNewPassword" runat="server" TextMode="Password" CssClass="AccTextBox" placeholder="CONFIRM NEW PASSWORD"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="ConfirmNewPasswordRequired" runat="server" ControlToValidate="ConfirmNewPassword" ErrorMessage="Error: Confirm New Password is required." ToolTip="Confirm New Password is required." ValidationGroup="ChangePassword">*</asp:RequiredFieldValidator>
+
+                        <asp:CompareValidator ID="NewPasswordCompare" runat="server" ControlToCompare="NewPassword" ControlToValidate="ConfirmNewPassword" Display="none" ErrorMessage="Error: The Confirm New Password must match the New Password entry." ValidationGroup="ChangePassword"></asp:CompareValidator>
+
+                    </div>
+
+                    <div class="AccBtnsBox">
+                        <asp:Button ID="ChangePasswordPushButton" runat="server" CommandName="ChangePassword" Text="Change Password" ValidationGroup="ChangePassword" CssClass="AccBtns" />
+
+                        <asp:Button ID="CancelPushButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" CssClass="AccBtns" />
+                    </div>
                 </div>
 
-                <div class="AccNewPass">
-                    <asp:Label ID="NewPasswordLabel" runat="server" AssociatedControlID="NewPassword" CssClass="AccLbl">New Password</asp:Label>
+            </ChangePasswordTemplate>
 
-                    <asp:TextBox ID="NewPassword" runat="server" TextMode="Password" CssClass="AccTextBox"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="NewPasswordRequired" runat="server" ControlToValidate="NewPassword" ErrorMessage="New Password is required." ToolTip="New Password" />
-
+            <SuccessTemplate>
+                <div class ="AccSuccess">
+                    <h3>Your password has been changed!</h3>
+                    <asp:Button ID="ContinuePushButton" runat="server" CausesValidation="False" CommandName="Continue" Text="Continue" CssClass="AccBtns" PostBackUrl="~/Admin/ARManager.aspx" />
+                    
                 </div>
-                <div class="AccConfPass">
-                    <asp:Label ID="ConfirmNewPasswordLabel" runat="server" AssociatedControlID="ConfirmNewPassword" CssClass="AccLbl">Confirm New Password</asp:Label>
+            </SuccessTemplate>
 
-                    <asp:TextBox ID="ConfirmNewPassword" runat="server" TextMode="Password" CssClass="AccTextBox"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="ConfirmNewPasswordRequired" runat="server" ControlToValidate="ConfirmNewPassword" ErrorMessage="Confirm New Password is required." ToolTip="Confirm New Password is required." ValidationGroup="ChangePassword">*</asp:RequiredFieldValidator>
+        </asp:ChangePassword>
 
-                    <asp:CompareValidator ID="NewPasswordCompare" runat="server" ControlToCompare="NewPassword" ControlToValidate="ConfirmNewPassword" Display="Dynamic" ErrorMessage="The Confirm New Password must match the New Password entry." ValidationGroup="ChangePassword"></asp:CompareValidator>
+    </div>
 
-                    <asp:Literal ID="FailureText" runat="server" EnableViewState="False"></asp:Literal>
-                </div>
-
-                <div class="AccBtnsBox">
-                    <asp:Button ID="ChangePasswordPushButton" runat="server" CommandName="ChangePassword" Text="Change Password" ValidationGroup="ChangePassword" CssClass="AccBtns" />
-
-                    <asp:Button ID="CancelPushButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" CssClass="AccBtns" />
-                </div>
-                </div>
-            </div>
-        </ChangePasswordTemplate>
-    </asp:ChangePassword>
+    <div class="MobSpace"></div>
 </asp:Content>
 
