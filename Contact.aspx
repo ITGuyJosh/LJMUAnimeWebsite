@@ -1,19 +1,31 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/FrontMaster.master" AutoEventWireup="true" CodeFile="Contact.aspx.cs" Inherits="Contact" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <%-- Load up Google API --%>
     <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <%-- Custom Map Function --%>
     <script>
+        //Initalise the map via it's lattitue & longitude, setting the zoom about
         function initialize() {
             var myLatlng = new google.maps.LatLng(53.403530, -2.971234);
             var mapOptions = {
                 zoom: 16,
-                center: myLatlng
+                center: myLatlng                
             }
+            
+            //Aplpying the mapOptions to the pages dom
+            var map = new google.maps.Map(document.getElementById("GoogleMaps"), mapOptions);            
 
-            var map = new google.maps.Map(document.getElementById("GoogleMaps"), mapOptions);
+            //Adding map marker
+            new google.maps.Marker({
+                position: myLatlng,
+                map: map,                
+            });       
         }
 
+        //Inialising map event
         google.maps.event.addDomListener(window, 'load', initialize);
+
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -21,7 +33,6 @@
     <section class="MainBody">
         <h2>Contact</h2>
         <div class="ContactForm">
-            <%--<div class="ContactForm">--%>
             <p>We meet every Thursday at 7PM term time at the John Foster Building. Check our <a href="https://www.facebook.com/groups/ljmuanime/?fref=ts">Facebook </a>page for regular updates about what anime will be showcased and contact LJMU Anime with the form below if you have any further questions or comments.</p>
 
                         <asp:TextBox ID="txtName" runat="server" CssClass="ContactFormTxtName" placeholder="NAME"></asp:TextBox>
@@ -67,7 +78,6 @@
                         <asp:Label ID="lblText" runat="server" Font-Bold="true"></asp:Label>
     
                         <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="BtnSubmit_Click" CssClass="ContactFormSubmit" />
-            <%--</div>--%>
         </div>
 
         <div class="ContactInfo">

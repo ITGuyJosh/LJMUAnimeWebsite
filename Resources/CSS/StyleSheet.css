@@ -772,6 +772,10 @@ footer{
 .AccBtns:hover {
     background-color:#181717;
 }
+.AccSuccess {
+    margin-top: 3%;
+    text-align:center;
+}
 
 /*Terms*/
 .TermsType {
