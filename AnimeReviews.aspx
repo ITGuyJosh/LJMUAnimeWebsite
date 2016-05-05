@@ -5,7 +5,7 @@
     <script src="Resources/Scripts/dotdot.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <section class="MainBody">
+    <div class="MainBody">
             <nav class="ReviewFilter">
                 <ul>
                     <li><strong>Filter: </strong></li>
@@ -47,7 +47,7 @@
             </LayoutTemplate>
             </asp:ListView>
                   
-        </section>
+        </div>
 
 <asp:SqlDataSource ID="LJMUDB" runat="server" ConnectionString="<%$ ConnectionStrings:LJMUDBCON %>" SelectCommand=" SELECT [anime_reviews].[id], UserName, category, [img_link], [title], [description], [review], [anime_reviews].[created] FROM [anime_reviews] 
   left join [aspnet_Users] on anime_reviews.user_id = aspnet_Users.id 

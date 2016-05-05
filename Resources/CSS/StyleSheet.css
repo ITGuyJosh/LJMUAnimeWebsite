@@ -307,6 +307,7 @@ footer{
     font-family: 'Open Sans', sans-serif;  
     min-width:80px; 
     width: 94%;
+    float:left;
 }
 .ContactFormSubmit:hover {
     background-color:#181717;
@@ -381,7 +382,7 @@ footer{
 }
 #DisplayReviewAside {
     width:20%;
-    float:right;    
+    float:left;    
     min-width:250px;
 }
 
@@ -396,7 +397,7 @@ footer{
 }
 
 #DisplayReviewSection {
-    width: 70%;
+    width: 72%;
     display:inline-block;
 }
 
@@ -1035,6 +1036,108 @@ footer{
 
 }
 
+@media (max-width: 680px) {
+    /*GENERAL BACKEND*/
+    .BackHeader {
+        height: 70px;
+    }
+    .BackHeader h1 {
+        font-size: 24px; 
+        text-align: center;
+        width: 100%;
+        padding: 0px;
+        margin: 0;
+        padding-top: 8px;
+    }
+    .BackHeaderNav {
+        font-size: 16px;        
+        text-align: center;
+        width: 100%;
+        padding: 0px;
+        margin: 0;
+        padding-top: 8px;
+    }
+    .DashBox {
+        width: 98%;
+    }
+    
+    /*ADMIN BACKEND*/
+    .CatManager {
+        margin-left: 2%;
+        width:100%;
+    }
+    .CatManagerInsert input {
+        width: 93.5%;
+    }
+    .AniEditMsg {
+        margin-top: 2%;
+        width: 96.9%;
+    }
+    .AREditSelector {
+        width: 100%;
+        margin-top: 3%;
+    }
+    .CatManager tbody {	
+	    font-size: 14px;	
+    }
+    .AREditSelector tbody {	
+	    font-size: 14px;	
+    }
+    .UsersManager {
+        margin: 0;
+        width: 100%;
+    }
+    .RolesManager {
+        margin: 0;
+        width: 100%;
+    }
+    .ChangePassBox {
+        width: 93%;
+    }
+    .LeftEditForm {
+        width: 99%;
+    }
+    .AniIDBox {
+        width: 85px;
+    }
+    .AniEditTitle {
+        width: 99.5%;        
+    }
+    .AniTitleBox {
+        width: 99%;
+        margin-top: 1%;
+    }
+    .DescEditBox {
+        width: 99%;
+    }
+    .AniCatEditBox {
+        width: 99.5%;
+    }
+    .RightEditForm {
+        width: 99%;
+    }
+    .linkBtns {
+        width: 23%;
+    }
+    
+    /*USER DASH*/
+    .BottomEditSelector tbody {	
+	    font-size: 14px;	
+    }
+    .LeftAddForm {
+        width: 98.5%;
+    }
+    .RightAddForm {
+        width: 100%;
+        margin-top:3%;
+        margin-bottom:3%;
+    }
+    .AddSubmit {
+        width: 23%;
+    }
+
+}
+
 @media (max-width: 600px) {
     .FooterSpace {
         /*forcing footer to bottom because of masterpages*/
@@ -1112,6 +1215,9 @@ footer{
     }
     .FooterSpace {
         margin-bottom:50%; //forcing footer to bottom because of masterpages
+    }
+    .AREditSelector tbody {	
+	    font-size: 11px;	
     }
      
 }

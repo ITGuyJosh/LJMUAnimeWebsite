@@ -78,14 +78,18 @@
 
 
         <div class="CatManager">
+
             <div class="CatManagerInsert">
                 <asp:FormView ID="AddCat" runat="server" DataKeyNames="id" DataSourceID="CatManagerCon" DefaultMode="Insert" RenderOuterTable="false">
+                    
                     <InsertItemTemplate>
+                        <asp:ValidationSummary ID="ValidationSummary" runat="server" ValidationGroup="AddCat" ShowMessageBox="true" CssClass="ErrorMsg" />
                         <h4>Create Anime Category</h4>
                         <asp:TextBox ID="categoryTextBox" runat="server" Text='<%# Bind("category") %>' />                    
                         <div class="CatLinkBtns"><asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" CssClass="BtnCatCreate" />
                         &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" CssClass="btnCatCancel" />
                             </div>
+                        <asp:RequiredFieldValidator ID="CatRequired" runat="server" ControlToValidate="categoryTextBox" ErrorMessage="Error: Category required." ToolTip="Category is required." ValidationGroup="AddCat">*</asp:RequiredFieldValidator>
                     </InsertItemTemplate>
                 </asp:FormView>
                 <asp:SqlDataSource ID="CatManagerCon" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:LJMUDBCON %>" InsertCommand="INSERT INTO [categories] ([category]) VALUES (@category)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT [id], [category] FROM [categories]" DeleteCommand="DELETE FROM [categories] WHERE [id] = @original_id AND (([category] = @original_category) OR ([category] IS NULL AND @original_category IS NULL))" UpdateCommand="UPDATE [categories] SET [category] = @category WHERE [id] = @original_id AND (([category] = @original_category) OR ([category] IS NULL AND @original_category IS NULL))">

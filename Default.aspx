@@ -3,10 +3,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <section class="WelcomeWrapper">                         
+    <div class="WelcomeWrapper">                         
                 <div class="DiscoverMessage">
                     <h1>North-West England's Best Anime Community</h1>
                 </div>               
-        </section>
+        </div>
 </asp:Content>
 

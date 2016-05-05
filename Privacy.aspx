@@ -22,7 +22,7 @@
                     We may gather information about your general internet use by using the cookie. Where used, these cookies are downloaded to your computer and stored on the computer’s hard drive. Such information will not identify you personally; it is statistical data which does not identify any personal details whatsoever.
                     Our advertisers may also use cookies, over which we have no control. Such cookies (if used) would be downloaded once you click on advertisements on our website.
                     You can adjust the settings on your computer to decline any cookies if you wish. This can be done within the “settings” section of your computer. For more information please read the advice at <a href="http://www.allaboutcookies.org/">AllAboutCookies.org</a>.</p>
-                </p>
+                
                 <h4>Use of Your Information</h4>
                 <p>We use the information that we collect from you to provide our services to you. In addition to this we may use the information for one or more of the following purposes:</p>
                 <ul>

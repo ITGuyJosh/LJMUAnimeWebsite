@@ -57,7 +57,7 @@
                 <div class="BottomEditForm">
                     <CKEditor:CKEditorControl ID="txtReview" BasePath="/Libs/ckeditor/" runat="server" Text='<%# Bind("review") %>'></CKEditor:CKEditorControl>
 
-                    <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="False" CommandName="Update" Text="Update Text" UpdateMethod="UpdateFile" CssClass="linkBtns" />
+                    <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="False" CommandName="Update" Text="Update" UpdateMethod="UpdateFile" CssClass="linkBtns" />
 
                     <asp:Button ID="Delete" Text="Delete" runat="server" CssClass="linkBtns" OnClick="DeleteReview" />
 

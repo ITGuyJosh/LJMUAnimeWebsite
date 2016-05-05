@@ -17,6 +17,11 @@ public partial class AddReview : System.Web.UI.Page {
 
     protected void btnSubmit_Click(object sender, EventArgs e) {
 
+        //declare variables
+        string title;
+        string desc;
+        string review;
+
         //get user name for IDing folder
         MembershipUser userID = Membership.GetUser();
         string user = userID.UserName;
@@ -37,23 +42,41 @@ public partial class AddReview : System.Web.UI.Page {
         string decode = txtReview.Text;
         string AniReview = Server.HtmlDecode(decode);
 
+        //removing quotes
+        title = AniTitle.Text.Replace("\"", "");
+        title = AniTitle.Text.Replace("\'", "");
+        desc = AniDesc.Text.Replace("\"", "");
+        desc = AniDesc.Text.Replace("\'", "");
+        review = AniReview.Replace("\"", "");
+        review = AniReview.Replace("\'", "");
+
         //set link destination
         string folderPath = uid + @"\Reviews\";
         string linkDest = folderPath + AniImgs.FileName;
 
-        //save file to directory
-        AniImgs.SaveAs(Server.MapPath(linkDest));
+        //checkif file has been uploaded
+        if (!AniImgs.HasFile)
+        {
+            FileValidator.IsValid = false;
+            return;
+        }
+        else {
+            //save file to directory
+            AniImgs.SaveAs(Server.MapPath(linkDest));
 
-        //prepare & execute command for inserting all review information into database
-        SqlCommand cmd = con.CreateCommand();
-        cmd.CommandType = CommandType.Text;        
-        cmd.CommandText = "INSERT INTO anime_reviews (user_id, category_id, img_link, title, description, review) VALUES('" + uid + "','" + AniCats.Text + "', '" + linkDest + "','" + AniTitle.Text + "','" + AniDesc.Text + "','" + AniReview + "')";
-        cmd.ExecuteNonQuery();
+            //prepare & execute command for inserting all review information into database
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "INSERT INTO anime_reviews (user_id, category_id, img_link, title, description, review) VALUES('" + uid + "','" + AniCats.Text + "', '" + linkDest + "','" + title + "','" + desc + "','" + review + "')";
+            cmd.ExecuteNonQuery();
 
-        //close sql connections
-        con.Close();
+            //close sql connections
+            con.Close();
 
-        //Redirect
-        Response.Redirect("UserDash.aspx");
+            //Redirect
+            Response.Redirect("UserDash.aspx");
+        }
+
+        
     }
 }

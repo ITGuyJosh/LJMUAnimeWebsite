@@ -29,8 +29,8 @@ public partial class AnimeReview : System.Web.UI.Page
     }
     protected void CatSelector_SelectedIndexChanged(object sender, EventArgs e)
     {
+        string cat = CatSelector.SelectedValue;
         
-        int cat = CatSelector.SelectedIndex + 1;
         LJMUDB.SelectCommand = "SELECT [anime_reviews].[id], UserName, category, [img_link], [title], [description], [review], [anime_reviews].[created] FROM [anime_reviews] left join [aspnet_Users] on anime_reviews.user_id = aspnet_Users.id   left join categories on anime_reviews.category_id = categories.id  WHERE categories.id = '" + cat + "'";
         LJMUDB.DataBind();
         AnimeReviews.DataBind();

@@ -23,11 +23,13 @@
                 </asp:Repeater>
             </div>
             <div class="RolesManager">
+                <asp:ValidationSummary ID="ValidationSummary" runat="server" ValidationGroup="RolesManager" ShowMessageBox="true" CssClass="ErrorMsg" />
                 <h3>Role Manager</h3>
                 <div class="RolesAddRole">
                     <asp:Label ID="lblRole" runat="server" Text="Role Name" AssociatedControlID="txtRole"></asp:Label>
                     <asp:TextBox ID="txtRole" runat="server"></asp:TextBox>
                     <asp:Button ID="btnAddRole" runat="server" Text="Add Role" OnClick="btnAddRole_Click" />
+                    <asp:RequiredFieldValidator ID="CatRequired" runat="server" ControlToValidate="txtRole" ErrorMessage="Error: Role required." ToolTip="Role is required." ValidationGroup="RolesManager">*</asp:RequiredFieldValidator>
                 </div>
                 <div class="RolesRepeater">
                     <asp:Repeater ID="rptrRoles" runat="server" OnItemCommand="rptrRoles_ItemCommand">
