@@ -9,12 +9,15 @@ using System.Data;
 using System.Web.Security;
 
 public partial class AddReview : System.Web.UI.Page {
+
+    //define db con
     SqlConnection con = new SqlConnection(@"Data Source=SQL2014.studentwebserver.co.uk;Initial Catalog=db_1525770_LJMUDB;Persist Security Info=True;User ID=user_db_1525770_LJMUDB;Password=On33chan66");
 
     public void Page_Load(object sender, EventArgs e) {
     
     }
 
+    //custom add function
     protected void btnSubmit_Click(object sender, EventArgs e) {
 
         //declare variables
@@ -48,7 +51,7 @@ public partial class AddReview : System.Web.UI.Page {
         desc = AniDesc.Text.Replace("\"", "");
         desc = AniDesc.Text.Replace("\'", "");
         review = AniReview.Replace("\"", "");
-        review = AniReview.Replace("\'", "");
+        review = AniReview.Replace("\'", "");        
 
         //set link destination
         string folderPath = uid + @"\Reviews\";

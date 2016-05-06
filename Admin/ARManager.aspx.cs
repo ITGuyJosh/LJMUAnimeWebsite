@@ -12,6 +12,8 @@ using System.Configuration;
 
 public partial class Admin_ARManager : System.Web.UI.Page
 {
+
+    //set db con
     SqlConnection con = new SqlConnection(@"Data Source=SQL2014.studentwebserver.co.uk;Initial Catalog=db_1525770_LJMUDB;Persist Security Info=True;User ID=user_db_1525770_LJMUDB;Password=On33chan66");
 
     protected void Page_Load(object sender, EventArgs e)
@@ -19,7 +21,7 @@ public partial class Admin_ARManager : System.Web.UI.Page
 
     }
 
-
+    //custom delete function for review
     protected void DeleteReview(object sender, EventArgs e)
     {
 

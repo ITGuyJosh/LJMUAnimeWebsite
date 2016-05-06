@@ -13,6 +13,7 @@ using System.IO;
 public partial class UserDash : System.Web.UI.Page
 {
     
+    //setting db con
     SqlConnection con = new SqlConnection(@"Data Source=SQL2014.studentwebserver.co.uk;Initial Catalog=db_1525770_LJMUDB;Persist Security Info=True;User ID=user_db_1525770_LJMUDB;Password=On33chan66");
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -24,6 +25,7 @@ public partial class UserDash : System.Web.UI.Page
 
         int uid;
 
+        //getting user id
         SqlCommand idcmd = con.CreateCommand();
         idcmd.CommandType = CommandType.Text;
         idcmd.CommandText = "SELECT id FROM aspnet_Users WHERE UserName = '" + user + "';";
@@ -35,6 +37,7 @@ public partial class UserDash : System.Web.UI.Page
 
     }  
 
+    //updating file funcion
     protected void UpdateFile(object sender, EventArgs e) {
         //get previous file
         Image currentImg = (Image)FilterUserReviews.FindControl("CurrentImg");       
@@ -69,6 +72,7 @@ public partial class UserDash : System.Web.UI.Page
 
     }
 
+    //custom delete function
     protected void DeleteReview(object sender, EventArgs e) {
 
         //get and declare control id & image path
