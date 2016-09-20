@@ -65,7 +65,6 @@
                 <li>Whilst we do take all reasonable steps to make sure that the information on this website is up to date and accurate at all times we do not guarantee that all material is accurate and ,or up to date.
                 </li>
                 <li>All material contained on this Website is provided without any or warranty of any kind. You use the material on this Website at your own discretion.</li>
-                <li>Chester University has right to take down or manipulate this website in anyway due to it being an academic project.</li>
             </ol>
             <h4>7. EXCLUSION OF LIABILITY</h4>
             <ol>
@@ -80,7 +79,7 @@
             </ol>
             <h4>9. REFERENCES</h4>
             <ol>
-                <li>These Terms and Conditions have been adapted from an open template from <a href="http://www.diylegals.co.uk/">http://www.diylegals.co.uk/</a> for use on <a href="Default.aspx">http://www.ljmuanimesoc.co.uk</a>.
+                <li>These Terms and Conditions have been adapted from an open template from <a href="http://www.diylegals.co.uk/">http://www.diylegals.co.uk/</a> for use on <a href="Default.aspx">http://www.ljmuanime.co.uk</a>.
                 </li>
             </ol>
         </div>

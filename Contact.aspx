@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <%-- Load up Google API --%>
-    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB0Oj5NJpGT0Oxn0FzQKfdiwWmk6AGFB-s"></script>
     <%-- Custom Map Function --%>
     <script>
         //Initalise the map via it's lattitue & longitude, setting the zoom about

@@ -22,10 +22,8 @@
                     
                     <ul>
                         <li><a href="About.aspx">About</a></li>
-                        <li><a href="AnimeReviews.aspx">Anime Reviews</a></li>
-                        <li><a href="Contact.aspx">Contact</a> |</li>
-                        <li><asp:LoginStatus ID="LoginStatus" runat="server" /></li>             
-                        <li><a href="users/UserDash.aspx">Dash</a></li>
+                        <li><a href="Gallery.aspx">Gallery</a></li>
+                        <li><a href="Contact.aspx">Contact</a></li>
                     </ul>
                 </nav>
         </header>

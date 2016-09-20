@@ -7,9 +7,6 @@
         <div id="AboutWrapper">
             <div id="AboutWelcome">
                 <img alt="Club Banner" src="Resources/Images/AllRiseBanner.png" id="Banner" />
-                <div id="Counter">
-                    <input type="text" id="InputCount" />
-                </div>
                 <h2>Welcome to LJMU Anime Society!</h2>
                 <h3>Would you like to know about what we get up to? Well..</h3>
             </div>
@@ -31,51 +28,5 @@
             </p>
         </div>
     </div>
-
-    <script>
-        // js script to countdown to japan day!
-        // declare variables
-        var before = "Japan Day!"
-        var current = "Kyou wa, Nihon no hidesu! Happy Japan Day!"
-        var montharray = new Array("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
-
-        // set countdown to year, month, day function
-        function countdown(yr, m, d) {
-            theyear = yr; themonth = m; theday = d
-            // get date/time
-            var today = new Date()
-            var todayy = today.getYear()
-            if (todayy < 1000) {
-                todayy += 1900;
-            }
-            var todaym = today.getMonth();
-            var todayd = today.getDate();
-            var todayh = today.getHours();
-            var todaymin = today.getMinutes();
-            var todaysec = today.getSeconds();
-            //generate string
-            var todaystring = montharray[todaym] + " " + todayd + ", " + todayy + " " + todayh + ":" + todaymin + ":" + todaysec
-            futurestring = montharray[m - 1] + " " + d + ", " + yr;
-            //parse string
-            dd = Date.parse(futurestring) - Date.parse(todaystring)
-            //calculate date
-            dday = Math.floor(dd / (60 * 60 * 1000 * 24) * 1);
-            dhour = Math.floor((dd % (60 * 60 * 1000 * 24)) / (60 * 60 * 1000) * 1);
-            dmin = Math.floor(((dd % (60 * 60 * 1000 * 24)) % (60 * 60 * 1000)) / (60 * 1000) * 1);
-            dsec = Math.floor((((dd % (60 * 60 * 1000 * 24)) % (60 * 60 * 1000)) % (60 * 1000)) / 1000 * 1);
-            // check if day is current if so output japan day
-            if (dday == 0 && dhour == 0 && dmin == 0 && dsec == 1) {
-                document.getElementById("InputCount").value = current;
-                return;
-            }
-                // set countdown
-            else {
-                document.getElementById("InputCount").value = "Only " + dday + "dys, " + dhour + "hrs, " + dmin + "mins, & " + dsec + "secs until " + before;
-                setTimeout("countdown(theyear,themonth,theday)", 1000);
-            }
-        }
-        //entering countdown date in function
-        countdown(2016, 08, 20);
-    </script>
 </asp:Content>
 

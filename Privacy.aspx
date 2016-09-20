@@ -42,7 +42,6 @@
                 <ul>
                     <li>Where we are legally required by law to disclose your personal information.</li>
                     <li>To further fraud protection and reduce the risk of fraud.</li>
-                    <li>If Chester University requests it for appropriate academic reasons.</li>
                 </ul>
 
                 <h4>Third Party Links</h4>
@@ -55,7 +54,7 @@
                 <p>Please do not hesitate to contact us regarding any matter relating to this Privacy and Cookies Policy via the contact form on the main site.</p>
 
                 <h4>References</h4>
-                <p>This Privacy & Cookie Policy has been adapted from an open template from <a href="http://www.diylegals.co.uk/">http://www.diylegals.co.uk/</a> for use on <a href="Default.aspx">http://www.ljmuanimesoc.co.uk</a>.</p>
+                <p>This Privacy & Cookie Policy has been adapted from an open template from <a href="http://www.diylegals.co.uk/">http://www.diylegals.co.uk/</a> for use on <a href="Default.aspx">http://www.ljmuanime.co.uk</a>.</p>
             </div>
         </div>
 </asp:Content>
