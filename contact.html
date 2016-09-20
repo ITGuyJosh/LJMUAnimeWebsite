@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>LJMU Anime Society</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, minimum-scale=1"/>
+    <link href="Resources/CSS/StyleSheet.css" rel="stylesheet"/>        
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="~/Resources/Images/favicon.ico"/> 
+    
+
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB0Oj5NJpGT0Oxn0FzQKfdiwWmk6AGFB-s"></script>
+
+    <script>
+        //Initalise the map via it's lattitue & longitude, setting the zoom about
+        function initialize() {
+            var myLatlng = new google.maps.LatLng(53.403530, -2.971234);
+            var mapOptions = {
+                zoom: 16,
+                center: myLatlng                
+            }
+            
+            //Aplpying the mapOptions to the pages dom
+            var map = new google.maps.Map(document.getElementById("GoogleMaps"), mapOptions);            
+
+            //Adding map marker
+            new google.maps.Marker({
+                position: myLatlng,
+                map: map,                
+            });       
+        }
+
+        //Inialising map event
+        google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+    
+</head>
+<body>                   
+        <header>
+                <h1>
+                    <a href="index.html">LJMU Anime Society</a>
+                    </h1>
+                <nav class="FrontHeaderNav">
+                    
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+        </header>
+
+    
+    <div class="MainBody">
+        <h2>Contact</h2>
+        <div class="ContactForm">
+            <p>We meet every Thursday at 7PM term time at the John Foster Building. Check our <a href="https://www.facebook.com/groups/ljmuanime/?fref=ts">Facebook </a>page for regular updates about what anime will be showcased and contact LJMU Anime with the form below if you have any further questions or comments.</p>
+
+                       <form id="contact" action="mail.php" method="post">
+
+    <fieldset>
+      <input name="name" placeholder="Your name" type="text" tabindex="1" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input name="email" placeholder="Your Email Address" type="email" tabindex="2" required>
+    </fieldset>
+    <fieldset>
+      <textarea name="comment" placeholder="Type your Message Here...." tabindex="5" required></textarea>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+    </fieldset>
+  </form>
+        </div>
+
+        <div class="ContactInfo">
+            <ul>
+                <li><strong>Address</strong></li>
+                <li>John Foster Building</li>
+                <li>80-98 Mount Pleasant</li>
+                <li>Merseyside</li>
+                <li>Liverpool</li>
+                <li>L3 5UZ</li>
+            </ul>
+            <div id="GoogleMaps">
+            </div>
+        </div>
+
+    </div>
+
+
+    <footer class="LandingFooter">            
+                <nav class="FrontFooterNav">
+                    
+                        <ul>
+                        <li><a href="#">&copy; Joshua Evans 15-16</a></li>                                     
+                            <li><a href="Terms.html">Terms & Conditions</a></li> 
+                            <li><a href="Privacy.html">Privacy Policy</a></li>                        
+                    </ul>                   
+                </nav>
+        </footer>   
+</body>
+</html>

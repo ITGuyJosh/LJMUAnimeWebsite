@@ -1,0 +1,1395 @@
+/*Document Body*/
+body {
+    margin:0px;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+#element::-webkit-scrollbar { 
+    display: none; 
+}
+body::-webkit-scrollbar { 
+    display: none; /* hide vertical scrollbar */
+    overflow-x: hidden;
+}
+
+/*Header Area*/
+header{
+    background-color: #181717;
+    width:100%;
+    display:block;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    height:50px;
+    top: 0;
+    position: fixed;
+    z-index:1000;
+}
+header h1 {
+    width: 33%;
+    padding-left:2%;
+    padding-top:10px; 
+    text-align:left; 
+    margin: 0px auto; 
+    font-size:30px;  
+    font-weight:500;
+    color: #fff;
+    float:left;
+    display:inline-block;
+}
+header h1 a{
+    color: #fff;
+    text-decoration: none;
+}
+.FrontHeaderNav {
+    width: 64%;
+    padding-top:15px; 
+    text-align:right; 
+    margin: 0px auto; 
+    font-size:20px;  
+    font-weight:500; 
+    float:left;
+    display:inline-block;
+    padding-right: 1%;
+}
+.FrontHeaderNav ul {
+    margin: 0; 
+    padding: 0; 
+    list-style-type: none; 
+    list-style-image: none;
+
+}
+.FrontHeaderNav li {
+    margin-right: 0px; 
+    display: inline;
+    color: #fff;
+
+}
+.FrontHeaderNav ul li a {
+    text-decoration:none;  
+    margin: 0px; 
+    padding: 10px 15px 0px 15px; 
+    color:#fff;
+}
+.FrontHeaderNav ul li a:hover {
+    text-decoration:none;
+
+}
+
+/*Footer Area*/
+footer{
+    background-color: #181717;
+    width:100%;
+    display:block;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    height:50px;
+    bottom: 0;
+    position: fixed; /* putting footer at bottom of page*/
+}
+.FrontFooterNav {
+    width: 100%;
+    padding-top:15px; 
+    text-align:left; 
+    margin: 0px auto; 
+    font-size:15px;  
+    font-weight:500; 
+    float:left;
+    display:inline-block;
+}
+.FrontFooterNav ul {
+    margin: 0; 
+    padding: 0; 
+    list-style-type: none; 
+    list-style-image: none;
+
+}
+.FrontFooterNav li {
+    margin-right: 0px; 
+    display: inline;
+    color: #fff;
+
+}
+.FrontFooterNav ul li a {
+    text-decoration:none;  
+    margin: 0px; 
+    padding: 10px 15px 0px 15px; 
+    color:#fff;
+
+}
+.FrontFooterNav ul li a:hover {
+    text-decoration:none;
+}
+
+/*Main Content Area*/
+.MainBody{
+    margin-top: 70px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    overflow-x: hidden;
+}
+.MainBody a {
+    text-decoration: none;
+    color: #2A5DB0;
+}
+.MainBody a:hover {
+    text-decoration: underline;
+}
+.ErrorMsg {
+    color: #cc0000;
+    text-align:center;
+    font-style: italic;
+    display:inline-table;
+    width: 100%;    
+}
+.ErrorMsg ul {
+    list-style-type:none;
+    padding: 0;
+}
+
+/*Landing Page*/
+.CoverImg {
+    background: url(../Images/Hokusai-Fugaku-Landing.png);
+    background-repeat: no-repeat;
+}
+.WelcomeWrapper {
+    height: 100px;
+    width: 350px;
+    position: fixed;
+    margin-left: 40%;
+    margin-right: 60%;
+    top: 12%;        
+}
+.DiscoverMessage {
+    padding: 10px;
+    color: #fff;
+    text-shadow: 2px 2px #181717;
+    font-size: 140%;
+}
+
+
+/*About Page*/
+#AboutWelcome h2 {
+    padding-top: 10px;
+    
+}
+#Banner{
+    height: 250px;
+    width: 100%;
+    
+}
+#AboutWrapper {
+    text-align: justify;
+    text-justify: inter-word;
+}
+#AboutWrapper h3 {
+    padding-top: 5px;
+}
+#Counter {
+    margin-top: 1.5%;
+    width:100%;
+}
+#Counter input {
+    width: 99%;
+    height: 20px;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;   
+    text-align:center;
+}
+
+/*Gallery Page*/
+.image-gallery{
+  width:100%;
+  margin:0 auto; 
+}
+
+.image-gallery img {
+  max-width:100%;
+  margin-bottom:15px;
+  
+}
+
+/* -- Big screen size -- */ 
+.image-gallery{  
+  -webkit-column-count: 3;  -webkit-column-gap: 15px;
+     -moz-column-count: 3;     -moz-column-gap: 15px;
+          column-count: 3;          column-gap: 15px;  
+}
+
+/* -- Medium screen size -- */
+@media screen and (max-width: 1100px) {
+  .image-gallery{ 
+    -webkit-column-count: 2;  -webkit-column-gap: 15px;
+       -moz-column-count: 2;     -moz-column-gap: 15px;
+            column-count: 2;          column-gap: 15px;  
+  }
+ .image-gallery{
+  width:85%;
+
+  }
+}
+
+/* -- Small screen size -- */
+@media screen and (max-width: 800px) {
+  .image-gallery{ 
+    -webkit-column-count: 2;  -webkit-column-gap: 15px;
+       -moz-column-count: 2;     -moz-column-gap: 15px;
+            column-count: 2;          column-gap: 15px;  
+  }
+  .image-gallery{
+    width:90%;
+  }
+}
+
+/* Micro screen size*/
+@media screen and (max-width: 600px) {
+  .image-gallery{ 
+    -webkit-column-count: 1;  -webkit-column-gap: 0px;
+       -moz-column-count: 1;     -moz-column-gap: 0px;
+            column-count: 1;          column-gap: 0px;  
+  }
+  .image-gallery{
+    width:95%;
+  }
+  
+  .image-gallery img{ /* fills 100% width on small screen */
+    width:100%;
+    height:auto;
+  }
+}
+
+/*Review Page*/
+    /*Review Filter Navigation*/
+.ReviewFilter {
+    padding-top:15px; 
+    padding-bottom:15px; 
+    margin-bottom: 3%;
+    float: right;
+    display:inline-block;
+    border-bottom: 1px solid;
+}
+.ReviewFilter ul {
+    margin: 0; 
+    padding: 0;
+    float: left;
+    text-align: left;
+    list-style-type: none; 
+    list-style-image: none;
+}
+.ReviewFilter li {
+    margin-right: 0px; 
+    display: inline;    
+}
+.ReviewFilter ul li a {
+    margin: 0px; 
+    padding: 10px 15px 0px 15px; 
+}
+.ReviewFilter span {
+    display: inline-block;
+    float: left;
+    margin-right: 5px;
+    margin-left: 15px;
+}
+    /*Anime Reivews*/
+.Reviews {
+    float: left;
+    margin-bottom: 30px;
+    display:block;
+    width:100%;
+}
+.Reviews h3 {
+    margin: 0px;   
+    margin-top: 10px;
+}
+.Reviews p {
+    margin: 0px;
+    padding-top: 7px;
+    //overflow: hidden;
+    max-height: 90px;
+    line-height: 1.8em;
+}
+.Reviews button {
+    display: block;
+    margin-top: 7px;
+    margin-bottom: 10px;
+}
+.Reviews span {
+    font-size: 12px;    
+    
+}
+.ReviewImg{
+    float: left;
+    width: 100px;
+    height: 150px;
+    padding-right: 20px;
+}
+
+.PagerContainer{
+   float:left;
+   width: 100%;
+   padding-bottom:20px;
+}
+
+.AnimePager{
+    float:right;
+}
+
+
+/*Contact Form*/
+.ContactForm {
+    float:left;
+    width:49%;
+    padding-right: 1%;
+}
+.ContactForm span {
+    float:left;
+    width:3%;  
+    margin-top: 10px;  
+}
+.ContactForm input[type="text"] {
+    width: 95%;    
+    font-size: 20px;
+    resize: none;
+    font-family: 'Open Sans', sans-serif;
+    padding: 1px;    
+    float:left;    
+    margin-bottom:2%;    
+}
+.ContactForm textarea {
+    width: 95%;
+    vertical-align: top;
+    height: 150px;
+    resize: none;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;       
+    float:left;    
+    margin-bottom:2%;
+}
+
+.ContactFormSubmit {    
+    height:30px;
+    margin:1%;
+    background-color: #3f3f3f;    
+    text-align:center;
+    cursor:pointer;
+    color:#fff;   
+    font-family: 'Open Sans', sans-serif;  
+    min-width:80px; 
+    width: 94%;
+    float:left;
+}
+.ContactFormSubmit:hover {
+    background-color:#181717;
+}
+.lblCorrect {
+    width: 94% !important;
+    margin-bottom: 2% !important;
+}
+
+.ContactInfo{
+    float:left;
+    width:49%;        
+    padding-left: 1%;
+}
+.ContactInfo ul {
+    list-style-type: none;
+    padding:0;
+    padding-bottom: 5px; 
+    margin:0;
+}
+.ContactInfo ul li{
+    text-align:right;
+}
+
+#GoogleMaps{
+    width:100%;
+    height:300px;
+}
+
+#contact input {
+    font-size: 20px;
+}
+
+fieldset {
+	border: medium none !important;
+	margin: 0 0 10px;
+	min-width: 100%;
+	padding: 0;
+	width: 100%;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact textarea {
+	width:95%;
+	border:1px solid #CCC;
+	background:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+}
+
+#contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
+	-webkit-transition:border-color 0.3s ease-in-out;
+	-moz-transition:border-color 0.3s ease-in-out;
+	transition:border-color 0.3s ease-in-out;
+	border:1px solid #AAA;
+}
+
+#contact textarea {
+	height:100px;
+	max-width:100%;
+  resize:none;
+}
+
+#contact button[type="submit"] {
+	cursor:pointer;
+	width:40%;
+	border:none;
+	background:#0CF;
+	color:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+	font-size:15px;
+}
+
+#contact button[type="submit"]:hover {
+	background:#09C;
+	-webkit-transition:background 0.3s ease-in-out;
+	-moz-transition:background 0.3s ease-in-out;
+	transition:background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+#contact input:focus, #contact textarea:focus {
+	outline:0;
+	border:1px solid #999;
+}
+::-webkit-input-placeholder {
+ color:#888;
+}
+:-moz-placeholder {
+ color:#888;
+}
+::-moz-placeholder {
+ color:#888;
+}
+:-ms-input-placeholder {
+ color:#888;
+}
+
+/*LOGIN PAGE*/
+.LoginBox {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    text-align: center;
+}
+.LoginBox h2 {
+    margin-bottom: 5%;  
+}
+.LoginBox input[type="text"]{
+    float: left;
+    width: 95%;
+}
+.LoginBox input[type="password"]{
+    float: left;
+    width: 95%;
+}
+.LoginBox span {
+    float: left;
+    width: 3%;
+}
+.LogName { 
+    margin-top:4%;   
+    width: 100%;
+    float: left;
+    margin-bottom: 2%;
+}
+.LogPass {    
+    width: 100%;
+    float: left;
+    margin-bottom: 2%;
+}
+
+/*ANIME REVIEWS PAGE*/
+#DisplayReviewMain {
+    width:90%;    
+    margin-top:7.5%;
+    margin-left:auto;
+    margin-right:auto;    
+    text-align: justify;
+    text-justify: inter-word;
+}
+#DisplayReviewAside {
+    width:20%;
+    float:left;    
+    min-width:250px;
+}
+
+#DisplayReviewAside img{
+   width: 225px;
+   height: 330px;   
+} 
+
+#DisplayReviewAside ul {
+    list-style:none;
+    padding-left: 10px;    
+}
+
+#DisplayReviewSection {
+    width: 72%;
+    display:inline-block;
+}
+
+/*REGISTER*/
+.RegContainer {
+    width:70%;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
+.RegContainer table {
+    width: 100%;
+}
+.RegContainer table input[type="submit"] {
+    text-align: center;
+}
+.RegContainer table tbody:last-child tr {
+    text-align: center;
+}
+.RegContainer table tbody:last-child td {
+    text-align: center;
+}
+
+.RegContainer input[type="text"] {
+    font-size: 20px;
+    resize: none;
+    font-family: 'Open Sans', sans-serif;
+    padding: 1px;
+    height: 30px;
+    width: 94%;
+    float:left;    
+    margin-bottom:2%;
+}
+.RegContainer input[type="password"] {
+    font-size: 20px;
+    resize: none;
+    font-family: 'Open Sans', sans-serif;
+    padding: 1px;
+    height: 30px;
+    width: 94%;
+    float:left;    
+    margin-bottom:2%;
+}
+.RegContainer span {
+    float:left;
+    width: 3%;
+}
+.RegContainer input[type="submit"]  {    
+    height:30px;
+    margin:1%;
+    background-color: #3f3f3f;    
+    text-align:center;
+    cursor:pointer;
+    color:#fff;   
+    font-family: 'Open Sans', sans-serif;  
+    min-width:80px; 
+}
+.RegContainer input[type="submit"]:hover {
+    background-color:#181717;
+}
+.CompleteReg {
+    text-align:center;
+}
+
+
+/*BACKMASTER HEADER*/
+.BackHeader{
+    background-color: #181717;
+    width:100%;
+    display:block;
+    padding: 0;
+    margin: 0;
+    height:50px;
+    top: 0;
+    position: relative;
+}
+.BackHeader h1 {
+    width: 280px;
+    margin-left: 3%;
+    padding-top: 10px;
+    text-align: left;    
+    font-size: 28px;
+    font-weight: 500;
+}
+.BackHeader h1 a{
+    color: #fff;
+    text-decoration: none;
+}
+.BackHeaderNav {
+    //width: 62%;
+    margin-right:3%;
+    padding-top:15px; 
+    float:right; 
+    font-size:20px;  
+    font-weight:500; 
+}
+.BackHeaderNav ul {
+    margin: 0; 
+    padding: 0; 
+    list-style-type: none; 
+    list-style-image: none;
+    color:#fff;
+
+}
+.BackHeaderNav li {
+    margin-right: 0px; 
+    display: inline;   
+}
+.BackHeaderNav ul li a {
+    text-decoration:none;  
+    margin: 0px; 
+    padding: 10px 15px 0px 15px; 
+    color:#fff;
+}
+.BackHeaderNav ul li a:hover {
+    text-decoration:none;
+
+}
+.DashContainer{
+    width:100%;
+    display:block;
+}
+.DashBox{
+    width:32%;
+    float:left;
+    height:10%;
+    margin-top:1%;
+    margin-bottom:1%;
+    margin-left:1%;
+    background-color: #181717;    
+    text-align:center;
+    cursor:pointer;
+}
+.DashBox:hover {
+    background-color:#3f3f3f;
+}
+.DashBox p {
+    text-decoration:none;
+    font-size: 18px;
+    color:#fff;
+}
+
+/*ADD REVIEW*/
+.BackMain{
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 98%;
+    overflow:hidden;    
+}
+.LeftAddForm {
+    width:70%;
+    float:left;
+    margin-right:1%;
+}
+.AniTitle {
+    width:100%;    
+    float:left;
+    margin-bottom:1%;
+    height: 40px;
+    font-size: 20px;
+}
+.AniDesc {
+    width:100%;
+    float:left;
+    height: 200px;
+    font-size: 20px;
+    resize:none;
+    font-family: 'Open Sans', sans-serif;
+    padding:1px;
+}
+.RightAddForm {
+    width:29%;
+    float:left;    
+}    
+.AniImgs {
+    width:99%;
+    float:left;
+    height: 44px;
+    margin-bottom:2.1%;
+    border:1px dashed #000;
+}
+.RightAddForm h3 {
+    margin-bottom: 1%;
+}
+.AniCats {
+    width:100%;
+    float:left;
+}
+.BottomAddForm {
+    margin-top:1%;
+    width:100%;
+    float:left;
+}
+.AddSubmit{
+    width:15%;
+    float:left;
+    height:30px;
+    margin:1%;
+    background-color: #3f3f3f;    
+    text-align:center;
+    cursor:pointer;
+    color:#fff;    
+}
+.AddSubmit:hover {
+    background-color:#181717;
+}
+
+
+/*USER DASH PAGE*/
+.AniEditMsg {
+    text-align: center;
+    border: #000 1px dashed;
+    float:left;
+    width: 97.9%;
+    margin-left:1%;
+}
+
+.LeftEditForm{
+    width:70%;
+    float:left;
+    margin-right:1%;
+}
+.AniIDRow {
+    width: 100%;
+    float:left;
+    margin-bottom:1%;
+}
+.AniIDBox {
+    width:12%;
+    float:left;
+    margin-right:1%;
+}
+.AniTitleBox {
+    width:84%;
+    float:left;
+}
+.AniIDRow h3 {
+    width: 60px;
+    float:left;
+    margin: 0;
+    padding-top:8px;
+}
+.AniEditID {
+    width: 70%;
+    float:left;
+    height:30px;
+    font-size:20px;
+    font-family: 'Open Sans', sans-serif;
+}
+.AniEditTitle {
+    width: 103.3%;
+    float: left;
+    font-size: 20px;
+    resize:none;
+    font-family: 'Open Sans', sans-serif;
+    padding:1px;
+    height: 30px;
+}
+
+.DescEditRow {
+    width:100%;
+    float:left;
+    margin-bottom:1%;
+}
+.DescEditRow h3 {
+    margin-bottom:1%;
+}
+.DescEditBox {
+    width:100%;
+    float:left;
+}
+.AniCatEditBox {
+    width: 40%;
+    float:left;
+    margin-right: 10%;
+}
+.AniCurrentImg {
+    width: 225px;
+}
+.AniImgEditBox {
+    width: 50%;
+    float:left;
+}
+.RightEditForm{
+    width:29%;
+    float:left;   
+    text-align:center;
+}
+.RightEditForm h3 {
+    margin-bottom: 1%;
+}
+.BottomEditForm{
+    margin-top:1%;
+    margin-bottom: 3%;
+    width:100%;
+    float:left;
+}
+
+.linkBtns{
+    width:15%;
+    float:left;
+    height:30px;
+    margin:1%;
+    background-color: #3f3f3f;    
+    text-align:center;
+    cursor:pointer;
+    color:#fff;    
+    text-decoration:none;
+    box-sizing:border-box;
+    padding: 4px 6px 2px;
+    border: 2px outset buttonface;
+    font-size: 16px; 
+}
+.linkBtns:hover {
+    background-color:#181717;
+}
+
+.BottomEditSelector {
+    margin-top: 3%;
+    margin-bottom:3%;
+    text-align:center;
+}
+
+.BottomEditSelector table {
+    width:100%;
+}
+
+.BottomEditSelector table th:nth-child(2) {
+    text-align:left;    
+}
+
+.BottomEditSelector table th {
+    text-align:center;    
+}
+
+/*ACC SETTINGS / CHANGE PASSWORD*/
+.ChangePassBox {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    text-align: center;
+}
+
+.AccLbl {
+    float:left;
+    text-align:left;
+    width:100%;
+    font-size: 20px;    
+    font-family: 'Open Sans', sans-serif;
+    padding:1px;
+    height: 30px;
+}
+.AccTextBox {
+    float:left;
+    width:100%;
+    font-size: 20px;
+    resize:none;
+    font-family: 'Open Sans', sans-serif;
+    padding:1px;
+    height: 30px;
+}
+
+.AccBtnsBox {
+    margin-top:1%;    
+}
+.AccBtns {    
+    height:30px;
+    margin:1%;
+    background-color: #3f3f3f;    
+    text-align:center;
+    cursor:pointer;
+    color:#fff;   
+    font-family: 'Open Sans', sans-serif;  
+    min-width:80px; 
+}
+.AccBtns:hover {
+    background-color:#181717;
+}
+.AccSuccess {
+    margin-top: 3%;
+    text-align:center;
+}
+
+/*Terms*/
+.TermsType {
+    list-style-type: lower-latin;
+}
+
+/*AR Manager*/
+.AREditSelector {
+    margin-top: 1.5%;
+    margin-bottom:3%;
+    width:74%;
+    float:left;
+}
+
+.AREditSelector table {
+    width:100%;
+}
+
+.AREditSelector table tr:last-child {
+    text-align:center;    
+    width: 100%;
+
+}
+
+.AREditSelector table tr:last-child td {
+    width: 10px;
+}
+
+/*Categories*/
+.CatManager {
+    width: 26%;
+    float:left;    
+}
+.CatManagerInsert input {
+    font-size: 20px;
+    resize: none;
+    font-family: 'Open Sans', sans-serif;
+    padding: 1px;
+    height: 30px;
+    width: 93%;
+    margin-bottom:1%;
+}
+.CatLinkBtns {
+    padding: 1px;
+    margin-top:1%;
+}
+.CatManagerEdit h4 {
+    margin-bottom: 17px;
+}
+.CatManagerEdit table {
+    width:95%;
+    text-align:left;
+}
+
+.CatManagerEdit table tr:last-child {
+    text-align:center;    
+    width: 100%;
+
+}
+
+/*Roles Manager*/
+.RolesContainer {
+    width:100%;        
+}
+.RolesContainer ul {
+    list-style:none;
+}
+.RolesContainer h3 {
+    text-align:center;
+}
+.RolesContainer input[type="submit"] {
+    height:20px;    
+    background-color: #3f3f3f;    
+    text-align:center;
+    cursor:pointer;
+    color:#fff;   
+    font-family: 'Open Sans', sans-serif;  
+    min-width:80px; 
+    margin-right: 5px;
+}
+.RolesContainer input[type="submit"]:hover {
+    background-color:#181717;
+}
+.UsersManager {
+    width:48%;
+    float: left;
+    margin-right:2%;
+}
+.UsersManager a {
+    float:right;
+}
+.UserManageUsers {
+    margin-bottom:5px;
+}
+.RolesManager {
+    width:48%;
+    float:left;
+    margin-left:2%;
+}
+.RolesManageRoles {
+    margin-bottom:5px;    
+}
+
+.RolesAddRole input[type="submit"]{
+    margin-bottom:10px;
+    padding-top:5px;
+    height: 30px;
+    width: 98%;
+    margin-left:1%;
+    margin-top: 2%;
+}
+.RolesAddRole input[type="text"] {
+    font-size: 20px;
+    resize: none;
+    font-family: 'Open Sans', sans-serif;
+    padding: 1px;
+    height: 30px;
+    width: 98%;
+}
+.RolesAddRole {
+    border-bottom: solid 1px;
+    margin-bottom: 10px;
+    border-bottom-color: #3f3f3f;
+}
+.RolesBackLink {
+    width:100%;
+    text-align:center;
+    float:left;
+    margin-top: 50px;
+}
+
+
+/*Media Queries for Different Screen Sizes*/
+
+@media (max-width: 925px) {
+    #DisplayReviewSection {
+        width:60%;    
+    }    
+}
+
+@media (max-width: 850px) {  
+    header{
+        background-color: #181717;
+        width:100%;
+        display:block;
+        padding: 0px 0px 0px 0px;
+        margin: 0px 0px 0px 0px;
+        height:70px;
+        top: 0;
+        position:relative; //makes the header not take up the screen space on mobile devices
+    }
+    header h1 {
+        width: 98%;        
+        text-align:center; 
+        margin: 0px auto; 
+        font-size: 25px; 
+        font-weight:500;
+        color: #fff;
+        float:left;
+        display:inline-block;
+    }
+    .FrontHeaderNav {
+        width: 98%;
+        padding-top: 5px;
+        text-align: center;
+        margin: 0px auto; 
+        font-size: 15px; 
+        font-weight:500; 
+        float:left;
+        display:inline-block;
+        line-height:18.5px;
+    }    
+    footer{
+        /*makes the footer not take up the screen space on mobile devices*/
+        position:relative; 
+    }
+    .LandingFooter {
+        /*keeps the splash screen as a centred whole for aesthetics*/ 
+        position:fixed; 
+    }      
+    .FrontFooterNav {
+        width: 100%;
+        padding-top:18px;        
+        text-align:center; 
+        margin: 0px auto; 
+        font-size: 12px; 
+        font-weight:500; 
+        float:left;
+        display:inline-block;        
+    }
+    .MainBody{
+        width: 90%;
+        margin-top: 20px;
+    }
+    #Banner{
+        padding-top: 10px;
+    }
+    .ContactForm {
+        width: 100%;
+        padding-right:0;
+    }
+    .ContactInfo {
+        width: 100%;
+        display:inline-block;
+        padding-bottom: 10px;
+        padding-left: 0;
+    }
+    .FooterSpace {
+        margin-bottom:25%; //forcing footer to bottom because of masterpages
+    }
+    .ContactFormSubmit {
+        margin-bottom: 3%;
+    }
+    .MobSpace {
+        margin-bottom: 75%;
+    }
+    .MobSpace2 {
+        margin-bottom: 60%;
+    }
+    .MobSpace3 {
+        margin-bottom: 100%;
+    }
+    #DisplayReviewAside {
+        width: 20%;
+    }
+    #DisplayReviewSection {
+        width: 100%;
+    }
+    .UserReviewTop {
+        width: 60%;
+        float: left;
+    }
+
+}
+
+@media (max-width: 705px) {
+    
+    #DisplayReviewAside {
+        width: 100%;               
+    }
+    #DisplayReviewAside img {        
+        float:left;        
+        min-width: 225px;
+    }
+    .UserReviewInfo {        
+        width: 225px;
+        float:left;
+    }
+
+    .UserReviewTop {
+        width: 100%;
+        float: left;
+    }
+
+}
+
+@media (max-width: 680px) {
+    /*GENERAL BACKEND*/
+    .BackHeader {
+        height: 70px;
+    }
+    .BackHeader h1 {
+        font-size: 24px; 
+        text-align: center;
+        width: 100%;
+        padding: 0px;
+        margin: 0;
+        padding-top: 8px;
+    }
+    .BackHeaderNav {
+        font-size: 16px;        
+        text-align: center;
+        width: 100%;
+        padding: 0px;
+        margin: 0;
+        padding-top: 8px;
+    }
+    .DashBox {
+        width: 98%;
+    }
+    
+    /*ADMIN BACKEND*/
+    .CatManager {
+        margin-left: 2%;
+        width:100%;
+    }
+    .CatManagerInsert input {
+        width: 93.5%;
+    }
+    .AniEditMsg {
+        margin-top: 2%;
+        width: 96.9%;
+    }
+    .AREditSelector {
+        width: 100%;
+        margin-top: 3%;
+    }
+    .CatManager tbody {	
+	    font-size: 14px;	
+    }
+    .AREditSelector tbody {	
+	    font-size: 14px;	
+    }
+    .UsersManager {
+        margin: 0;
+        width: 100%;
+    }
+    .RolesManager {
+        margin: 0;
+        width: 100%;
+    }
+    .ChangePassBox {
+        width: 93%;
+    }
+    .LeftEditForm {
+        width: 99%;
+    }
+    .AniIDBox {
+        width: 85px;
+    }
+    .AniEditTitle {
+        width: 99.5%;        
+    }
+    .AniTitleBox {
+        width: 99%;
+        margin-top: 1%;
+    }
+    .DescEditBox {
+        width: 99%;
+    }
+    .AniCatEditBox {
+        width: 99.5%;
+    }
+    .RightEditForm {
+        width: 99%;
+    }
+    .linkBtns {
+        width: 23%;
+    }
+    
+    /*USER DASH*/
+    .BottomEditSelector tbody {	
+	    font-size: 14px;	
+    }
+    .LeftAddForm {
+        width: 98.5%;
+    }
+    .RightAddForm {
+        width: 100%;
+        margin-top:3%;
+        margin-bottom:3%;
+    }
+    .AddSubmit {
+        width: 23%;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .FooterSpace {
+        /*forcing footer to bottom because of masterpages*/
+        margin-bottom:32%; 
+    }
+}
+
+@media (max-width: 530px){
+    #AboutWelcome h2 {
+        padding-top: 0px;
+        display: block;
+
+    }
+    #Banner{
+        height: 180px;
+    }
+       .WelcomeWrapper {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .FooterSpace {
+        margin-bottom:40%; //forcing footer to bottom because of masterpages
+    }
+}
+
+@media(max-width: 500px) {
+    #DisplayReviewAside img {        
+        width: 70%;
+        display:block;
+        margin: 0 auto;
+        float:none;
+    }
+    .UserReviewInfo {        
+        width: 100%;        
+    }
+}
+@media (max-width: 450px) {
+    header {
+        height: 85px;
+    }
+    .ContactForm input[type="text"] {
+        width: 94%;
+    }
+    .ContactForm textarea {
+        width: 94%;
+    }
+    .RegContainer {
+        width: 100%;
+    }
+    .LoginBox {
+        width: 100%;
+    }
+    #Counter input {
+        font-size: 11px;
+        width: 98%;
+    }
+}
+
+@media (max-width: 420px) {
+    .FrontFooterNav ul li a {
+        padding: 0px 10px 0px 0px;
+    }
+
+    .ReviewFilter {
+        width: 100%;
+    }
+
+    .ReviewFilter ul {
+            float: none;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        .ReviewFilter select {
+            width: 100%;
+        }
+        #Banner{
+        height: 120px;
+    }
+    .FooterSpace {
+        margin-bottom:50%; //forcing footer to bottom because of masterpages
+    }
+    .AREditSelector tbody {	
+	    font-size: 11px;	
+    }
+    
+    #contact input[type="text"], #contact input[type="email"], #contact textarea {
+	width:92.5%;
+    }
+}
+     
+}
+@media (max-width: 370px) {
+    .FrontHeaderNav {
+        font-size: 4vw; /* resize inline with the viewport */
+    }
+    .FrontFooterNav {
+        font-size: 3.2vw;
+        padding-bottom: 5px;
+    }
+    .FrontFooterNav ul li a {
+        padding: 0px 16px 0px 0px; 
+    }
+    .FooterSpace {
+        margin-bottom:60%; //forcing footer to bottom because of masterpages
+    }        
+} 
+
+@media (min-width: 1441px) {
+    CoverImg {
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    }
+}
