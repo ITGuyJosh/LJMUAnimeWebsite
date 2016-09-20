@@ -477,6 +477,10 @@ fieldset {
  color:#888;
 }
 
+.mailimg img {
+    width: 80%;
+}
+
 /*LOGIN PAGE*/
 .LoginBox {
     margin-left: auto;

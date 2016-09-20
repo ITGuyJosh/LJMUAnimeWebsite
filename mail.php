@@ -14,14 +14,14 @@
   mail($admin_email, "$subject", $comment, "From:" . $email);
   
   //Email response
-  echo "Thank you for contacting us!";
+  header("Location: mailthanks.html");    
      
   }
     
   
   //if "email" variable is not filled out, display the form
   else  {
-    echo "<h3>Sorry, there has been an error with your email. Please try again later.</h3>"
+    header("Location: mailerror.html"); 
   }
 
 ?>
